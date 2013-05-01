@@ -1,8 +1,7 @@
 // from http://stackoverflow.com/questions/3026686/safari-extension-questions
 function getMessage(msgEvent) {
 
-    if (msgEvent.name == "settingValueIs")
-	if(window.location.href.match(/^https:\/\/twitter.com.*/)){window.location=msgEvent.message}
+    window.location=msgEvent.message
 
 }
 

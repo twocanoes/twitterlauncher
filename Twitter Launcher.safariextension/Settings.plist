@@ -3,14 +3,22 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>DefaultValue</key>
-		<string>twitter://</string>
 		<key>Key</key>
-		<string>urlHandler</string>
+		<string>chooseHandler</string>
 		<key>Title</key>
-		<string>URL Handler</string>
+		<string>Choose app</string>
+		<key>Titles</key>
+		<array>
+			<string>twitter</string>
+			<string>tweetbot</string>
+		</array>
 		<key>Type</key>
-		<string>TextField</string>
+		<string>ListBox</string>
+		<key>Values</key>
+		<array>
+			<string>twitter://</string>
+			<string>tweetbot://</string>
+		</array>
 	</dict>
 </array>
 </plist>

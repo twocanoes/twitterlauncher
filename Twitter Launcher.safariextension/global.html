@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <title>stuff</title>
+   <script type="text/javascript">
+
+// from http://stackoverflow.com/questions/3026686/safari-extension-questions
+
+function respondToMessage(messageEvent) {
+
+    if (messageEvent.name == "getSettingValue") {
+
+           // getItem("foo");
+        var value = safari.extension.settings.getItem(messageEvent.message);
+        // return value of foo to injected script
+           safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("settingValueIs", value);
+
+    } 
+
+}
+
+safari.application.addEventListener("message",respondToMessage,false);
+
+   </script>
+</head>
+<body>
+</body>
+</html>
+
